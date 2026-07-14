@@ -35,6 +35,16 @@
   .personaje-row{display:flex;justify-content:space-between;align-items:baseline;padding:0.5rem 0;border-top:1px solid rgba(255,255,255,0.04);gap:1rem;}
   .personaje-nombre{font-size:0.88rem;font-weight:500;color:var(--blanco);}
   .personaje-actor{font-size:0.78rem;font-weight:300;color:rgba(255,255,255,0.35);text-align:right;}
+  .galeria{max-width:1040px;margin:0 auto;padding:1rem 2rem 5rem;}
+  .galeria-label{font-size:0.62rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--rojo);margin-bottom:2rem;display:block;}
+  .galeria-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem;}
+  .galeria-grid img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(0.15) contrast(1.05);}
+  .galeria-col{display:flex;flex-direction:column;gap:1.5rem;}
+  .g-tall{grid-row:span 2;aspect-ratio:2/3;overflow:hidden;}
+  .g-wide{aspect-ratio:3/2;overflow:hidden;}
+  .g-sq{aspect-ratio:1/1;overflow:hidden;}
+  .g-cap{font-size:0.68rem;letter-spacing:0.06em;color:rgba(255,255,255,0.3);margin-top:0.6rem;font-style:italic;}
+  @media(max-width:700px){.galeria{padding:0.5rem 1.25rem 3rem;}.galeria-grid{grid-template-columns:1fr;}.g-tall{grid-row:auto;aspect-ratio:3/4;}}
   .nav-obras{display:flex;justify-content:space-between;padding:2rem;border-top:1px solid rgba(255,255,255,0.06);max-width:1040px;margin:0 auto;}
   .nav-obra-link{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25);text-decoration:none;transition:color 0.2s;}
   .nav-obra-link:hover{color:rgba(255,255,255,0.7);}
@@ -57,7 +67,7 @@
   <a href="index.html#boletos" class="cta-nav">Boletos</a>
 </nav>
 
-<div class="hero" style="background:var(--morado);border-bottom:3px solid var(--rojo);">
+<div class="hero" style="background:linear-gradient(180deg, rgba(64,41,66,0.55) 0%, rgba(10,7,10,0.88) 78%, #000 100%), url('images/los-de-arriba/hero-19.jpg') center 22%/cover; border-bottom:3px solid var(--rojo);">
   <span class="hero-num">IV</span>
   <div style="max-width:1040px;margin:0 auto;width:100%;">
     <a href="index.html#piezas" class="back">← El programa</a>
@@ -93,6 +103,23 @@
     </div>
     <div class="sidebar-block">
       <a href="index.html#boletos" class="cta-nav" style="display:block;text-align:center;padding:1rem;">Comprar boletos →</a>
+    </div>
+  </div>
+</div>
+
+<div class="galeria">
+  <span class="galeria-label">Registro de escena</span>
+  <div class="galeria-grid">
+    <div class="g-tall">
+      <img src="images/los-de-arriba/gallery-secundino-manos.jpg" alt="Secundino, Los de Arriba, Kynario 2026">
+    </div>
+    <div class="galeria-col">
+      <div class="g-wide">
+        <img src="images/los-de-arriba/gallery-carmen-retrato.jpg" alt="Carmen, Los de Arriba, Kynario 2026">
+      </div>
+      <div class="g-sq">
+        <img src="images/los-de-arriba/gallery-carmen-salto.jpg" alt="Carmen, Los de Arriba, Kynario 2026">
+      </div>
     </div>
   </div>
 </div>
