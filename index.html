@@ -164,12 +164,16 @@
     margin-top: 2.5rem;
   }
 
-  .hero-mosaic { display:flex; gap:0.75rem; margin-top:3rem; max-width:620px; }
-  .hero-mosaic a { flex:1; aspect-ratio:3/4; overflow:hidden; position:relative; display:block; }
+  .hero-mosaic { position:absolute; top:9rem; right:4rem; display:grid; grid-template-columns:repeat(2,150px); gap:0.9rem; z-index:1; }
+  .hero-mosaic a { aspect-ratio:3/4; overflow:hidden; position:relative; display:block; }
   .hero-mosaic img { width:100%; height:100%; object-fit:cover; filter:grayscale(0.2) contrast(1.05) brightness(0.85); transition:filter 0.25s, transform 0.4s; display:block; }
   .hero-mosaic a:hover img { filter:grayscale(0) contrast(1.05) brightness(1); transform:scale(1.04); }
   .hero-mosaic span { position:absolute; bottom:0.5rem; left:0.6rem; font-size:0.62rem; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.85); text-shadow:0 1px 4px rgba(0,0,0,0.8); }
-  @media(max-width:700px){ .hero-mosaic{max-width:100%;} }
+  @media(max-width:1100px){ .hero-mosaic{display:none;} .hero-mosaic-mobile{display:grid !important;} }
+  .hero-mosaic-mobile{ display:none; grid-template-columns:repeat(4,1fr); gap:0.6rem; margin-top:3rem; max-width:620px; }
+  .hero-mosaic-mobile a{ aspect-ratio:3/4; overflow:hidden; position:relative; display:block; }
+  .hero-mosaic-mobile img{ width:100%; height:100%; object-fit:cover; filter:grayscale(0.2) contrast(1.05) brightness(0.85); display:block; }
+  .hero-mosaic-mobile span{ position:absolute; bottom:0.35rem; left:0.4rem; font-size:0.52rem; letter-spacing:0.04em; text-transform:uppercase; color:rgba(255,255,255,0.85); text-shadow:0 1px 4px rgba(0,0,0,0.8); }
 
   /* ─── BOTONES ─── */
   .btn-primary {
@@ -587,6 +591,13 @@
     <a href="pan-invisible.html"><img src="images/pan-invisible/hero-17.jpg" alt="Pan Invisible"><span>Pan Invisible</span></a>
     <a href="los-de-arriba.html"><img src="images/los-de-arriba/hero-britannia.jpg" alt="Los de Arriba"><span>Los de Arriba</span></a>
   </div>
+
+  <div class="hero-mosaic-mobile">
+    <a href="huga-buga.html"><img src="images/huga-buga/hero-mog-toruk.jpg" alt="Huga Buga"><span>Huga Buga</span></a>
+    <a href="post-mortem.html"><img src="images/post-mortem/hero-72.jpg" alt="Post Mortem"><span>Post Mortem</span></a>
+    <a href="pan-invisible.html"><img src="images/pan-invisible/hero-17.jpg" alt="Pan Invisible"><span>Pan Invisible</span></a>
+    <a href="los-de-arriba.html"><img src="images/los-de-arriba/hero-britannia.jpg" alt="Los de Arriba"><span>Los de Arriba</span></a>
+  </div>
 </section>
 
 <!-- SOBRE -->
@@ -807,6 +818,7 @@
     <h2 class="display section-title">Elenco completo</h2>
     <p style="font-size:0.82rem;color:rgba(255,255,255,0.35);margin-bottom:2rem;">
       <a href="elenco.html" style="color:var(--naranja);text-decoration:none;letter-spacing:0.05em;">Ver perfil completo →</a>
+      <span style="color:rgba(255,255,255,0.2);"> · Toca una tarjeta para ir a su Instagram</span>
     </p>
     <div class="elenco-grid">
       <a href="https://www.instagram.com/readdy_p.b/" target="_blank" class="elenco-item" style="text-decoration:none;color:inherit;">
@@ -895,9 +907,14 @@
   <div class="section-inner">
     <span class="section-label">Agradecimientos</span>
     <h2 class="display section-title" style="font-size:clamp(1.6rem,3.5vw,2.5rem);">Gracias</h2>
-    <p style="font-size:0.9rem;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.8;max-width:640px;">
-      Jesús — Iluminación.
-    </p>
+    <div style="font-size:0.9rem;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.85;max-width:640px;">
+      <p>Como Kymera Teatro, queremos agradecer profundamente a todas las personas que hicieron posible este proyecto.</p>
+      <p style="margin-top:1.1rem;">Gracias a nuestros profesores, Paloma Domínguez y Santiago Guerra, por guiarnos, impulsarnos y compartir con nosotros su experiencia. Gracias también a nuestras familias, que estuvieron presentes en cada etapa de este montaje. En especial, al Sr. Freddy Páez Angarita, fundador del Corporativo Rilea, por apoyarnos incluso más de lo necesario para hacer realidad este proyecto. Y, por supuesto, al Foro Punto Escénico, por abrirnos sus puertas y brindarnos un hogar para contar estas historias.</p>
+      <p style="margin-top:1.1rem;">Como director, solo puedo sentir gratitud por el elenco que me acompañó. Gracias por confiar en mi visión y hacerla suya. No pude haber pedido un mejor equipo.</p>
+      <p style="margin-top:1.1rem;">Gracias a Yorly, que terminó siendo la todóloga del proyecto; a Emi, por mantener los ensayos llenos de historias y risas; a Pablo, que parecía nunca estar listo, pero siempre llegaba al escenario cuando importaba; a Ferchis, por su enorme disposición; a Marco, por la calma y ligereza que aportó al proceso; a Moti, por su experiencia y sabiduría; y a Jesús, que se rifó con las luces y siempre estuvo dispuesto a sacar adelante cada función.</p>
+      <p style="margin-top:1.1rem;">Mi agradecimiento también es para todo el equipo de Canimera Teatro, que decidió aventarse con nosotros en esta apuesta. Gracias, Alí y Dany, por la confianza. Haber asistido a su muestra teatral fue el inicio de una colaboración que hoy me llena de orgullo.</p>
+      <p style="margin-top:1.1rem;">Finalmente, gracias a todas las personas que creyeron en este proyecto, y a las que lo vieron. Sin ustedes, estas serían historias vacías.</p>
+    </div>
   </div>
 </section>
 
@@ -908,6 +925,7 @@
     <ul class="footer-links">
       <li><a href="https://instagram.com/kymera.teatro" target="_blank">Instagram</a></li>
       <li><a href="https://wa.me/523318300226" target="_blank">WhatsApp</a></li>
+      <li><a href="https://elanfiteatro.mx/obra/kynario-juicios-sobre-existir" target="_blank">Deja tu reseña</a></li>
       <li><a href="elenco.html">Elenco</a></li>
     </ul>
     <p class="footer-copy">Kymera Teatro · Guadalajara, Jalisco · 2026 · Espacio para nuevas voces</p>
