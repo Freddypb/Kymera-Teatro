@@ -38,11 +38,13 @@
   footer { background:#000; padding:2.5rem 2rem; border-top:1px solid rgba(255,255,255,0.06); }
   .footer-inner { max-width:1040px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
   .footer-logo { font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:0.1em; color:rgba(255,255,255,0.4); }
-  .footer-links { display:flex; gap:1.5rem; list-style:none; }
+  .footer-links { display:flex; flex-wrap:wrap; gap:0.75rem 1.5rem; list-style:none; }
   .footer-links a { font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.25); text-decoration:none; transition:color 0.15s; }
   .footer-links a:hover { color:rgba(255,255,255,0.6); }
   .footer-copy { font-size:0.72rem; color:rgba(255,255,255,0.15); width:100%; margin-top:1.25rem; border-top:1px solid rgba(255,255,255,0.04); padding-top:1.25rem; }
   @media(max-width:700px) { nav { padding:0.75rem 1rem; } .page-header,.section { padding-left:1.25rem; padding-right:1.25rem; } .members-grid { grid-template-columns:1fr; } }
+
+  @media(max-width:480px){ nav > div{gap:0.6rem;} nav a.cta-nav{font-size:0.66rem;padding:0.42rem 0.7rem;} nav > div > a[href*="instagram.com"]{display:none;} }
 </style>
 </head>
 <body>
@@ -74,15 +76,15 @@
     <span class="section-label">Kymera Teatro</span>
     <div class="members-grid">
       <a href="https://www.instagram.com/readdy_p.b/" target="_blank" class="member-card">
-        <div class="avatar">FP</div>
+        <div class="avatar" style="overflow:hidden;padding:0;"><img src="images/elenco/freddy.jpg" alt="Freddy Páez Bravo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
         <div>
           <p class="m-nombre">Freddy Páez Bravo</p>
-          <p class="m-rol">Dirección General · Dramaturgo</p>
+          <p class="m-rol">Dirección General · Productor · Dramaturgo</p>
           <p class="m-personaje">Toruk, Benito<br><span style="color:rgba(255,255,255,0.25);font-size:0.75rem;">Huga Buga · Pan Invisible</span></p>
         </div>
       </a>
       <a href="https://www.instagram.com/araizaemiliano_/" target="_blank" class="member-card">
-        <div class="avatar">EA</div>
+        <div class="avatar" style="overflow:hidden;padding:0;"><img src="images/elenco/emiliano.jpg" alt="Emiliano Araiza" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
         <div>
           <p class="m-nombre">Emiliano Araiza</p>
           <p class="m-rol">Actor · Dramaturgo</p>
@@ -90,10 +92,10 @@
         </div>
       </a>
       <a href="https://www.instagram.com/yourslennyy/" target="_blank" class="member-card">
-        <div class="avatar">YN</div>
+        <div class="avatar" style="overflow:hidden;padding:0;"><img src="images/elenco/yorly.jpg" alt="Yorly Navarro" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
         <div>
           <p class="m-nombre">Yorly Navarro</p>
-          <p class="m-rol">Actriz · Dramaturga</p>
+          <p class="m-rol">Productora · Actriz · Dramaturga</p>
           <p class="m-personaje">Luma, Carmen<br><span style="color:rgba(255,255,255,0.25);font-size:0.75rem;">Huga Buga · Los de Arriba</span></p>
         </div>
       </a>
@@ -114,7 +116,7 @@
         </div>
       </a>
       <a href="https://www.instagram.com/_mar_trzz/" target="_blank" class="member-card">
-        <div class="avatar">MG</div>
+        <div class="avatar" style="overflow:hidden;padding:0;"><img src="images/elenco/mar.jpg" alt="Mar Trizzo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
         <div>
           <p class="m-nombre">Mar Trizzo</p>
           <p class="m-rol">Actor</p>
@@ -146,7 +148,7 @@
 <!-- POST MORTEM INVITADOS -->
 <section style="background:var(--negro);padding-top:2.5rem;padding-bottom:3.5rem;">
   <div class="page-inner">
-    <span class="section-label">Post Mortem · Obra invitada</span>
+    <span class="section-label">Post Mortem · Obra invitada · Canimera Teatro</span>
     <div class="members-grid">
       <a href="https://www.instagram.com/nic.rdgzz/" target="_blank" class="member-card">
         <div class="avatar invitado">NR</div>
